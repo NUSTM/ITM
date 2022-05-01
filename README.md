@@ -15,7 +15,7 @@ We adopt two kinds of datasets to systematically evaluate the effectiveness of I
 - Image-Target Matching dataset for the two auxiliary tasks: the processed pkl files are in floder  ./data/Image_Target_Matching/ . The original annotated xml files can be download from [Baidu Netdist]() with code: xxxx.
   
 ## Image Processing 
-We use [Faster-RCNN](https://github.com/peteanderson80/bottom-up-attention) to extract region feature as the input feature of images.
+We use [Faster-RCNN](https://github.com/peteanderson80/bottom-up-attention) to extract region feature as the input feature of images.For the details, you can refer to the [Faster-RCNN](https://github.com/peteanderson80/bottom-up-attention).
 ```
 python ./tools/extract_feat.py --gpu 0 \
                     --cfg experiments/cfgs/faster_rcnn_end2end_resnet_vg.yml \
