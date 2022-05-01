@@ -30,11 +30,25 @@ python ./tools/extract_feat.py --gpu 0 \
  Note that you should change data path.
 - Training for ITM
 ```
-sh train.sh
+ python train.py 
+    --dataset ${i} \
+    --data_dir ./data/ \
+    --VG_data_dir ./data/Image-Target Matching \
+    --imagefeat_dir /mnt/nfs-storage-titan/data/twitter_images/ \
+    --VG_imagefeat_dir /mnt/nfs-storage-titan/data/twitter_images/ \
+    --output_dir ./log/ 
 ```
 - Inference for ITM
 ```
-sh test.sh
+python test.py 
+    --dataset ${i} \
+    --data_dir ./data/ \
+    --VG_data_dir ./data/Image-Target Matching \
+    --imagefeat_dir /mnt/nfs-storage-titan/data/twitter_images/ \
+    --VG_imagefeat_dir /mnt/nfs-storage-titan/data/twitter_images/ \
+    --output_dir ./log/ \
+    --model_file pytorch_model.bin \
+    --vis 
 ```
 
 ## Acknowledgements
