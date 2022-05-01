@@ -22,7 +22,7 @@ python ./tools/extract_feat.py --gpu 0 \
                     --def models/vg/ResNet-101/faster_rcnn_end2end_final/test.prototxt \
                     --net data/faster_rcnn_models/resnet101_faster_rcnn_final.caffemodel \
                     --img_dir ../ITM/data/twitter_images/twitter2017 \           
-                    --out_dir ../ITM/data/twitter_images/twitter2017_extrace/   
+                    --out_dir ../ITM/data/twitter_images/twitter2017_extract/   
                     --num_bbox 100,100 \             
                     --feat_name pool5_flat   
 ```
