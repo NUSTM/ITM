@@ -70,7 +70,7 @@ def main():
     
     ## Required parameters
     parser.add_argument("--dataset",
-                        default='twitter2017',
+                        default='twitter2015',
                         type=str,
                         required=True,
                         help="The name of the task to train.")
@@ -145,7 +145,7 @@ def main():
                              "E.g., 0.1 = 10%  of training.")
     parser.add_argument('--seed',
                         type=int,
-                        default=97,  
+                        default=2020,  # 24  
                         help="random seed for initialization")
     parser.add_argument('--roi_num', 
                         default=100, 
