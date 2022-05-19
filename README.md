@@ -27,8 +27,8 @@ python ./tools/extract_feat.py --gpu 0 \
                     --cfg experiments/cfgs/faster_rcnn_end2end_resnet_vg.yml \
                     --def models/vg/ResNet-101/faster_rcnn_end2end_final/test.prototxt \
                     --net data/faster_rcnn_models/resnet101_faster_rcnn_final.caffemodel \
-                    --img_dir ../ITM/data/twitter_images/twitter2017 \           
-                    --out_dir ../ITM/data/twitter_images/twitter2017_extract/   
+                    --img_dir ../ITM/data/twitter_images/twitter2017_ori \           
+                    --out_dir ../ITM/data/twitter_images/twitter2017/ \   
                     --num_bbox 100,100 \             
                     --feat_name pool5_flat   
 ```
