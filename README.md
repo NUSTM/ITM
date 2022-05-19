@@ -11,7 +11,7 @@ wjm@njust.edu.cn
 ## Data 
 We adopt two kinds of datasets to systematically evaluate the effectiveness of ITM.
 
-- Twitter datasets for the TMSC task: the processed pkl files are in floder  `./data/twitter201x/` . The original tweets, images and sentiment annotations can be download from [https://drive.google.com/file/d/1PpvvncnQkgDNeBMKVgG2zFYuRhbL873g/view](https://drive.google.com/file/d/1PpvvncnQkgDNeBMKVgG2zFYuRhbL873g/view)
+- Twitter datasets for the TMSC task: the processed pkl files are in floder  `./data/Sentiment_Analysis/twitter201x/` . The original tweets, images and sentiment annotations can be download from [https://drive.google.com/file/d/1PpvvncnQkgDNeBMKVgG2zFYuRhbL873g/view](https://drive.google.com/file/d/1PpvvncnQkgDNeBMKVgG2zFYuRhbL873g/view)
 - Image-Target Matching dataset for the two auxiliary tasks: the processed pkl files are in floder  `./data/Image_Target_Matching/` . The original annotated xml files can be download from [Baidu Netdist]() with code: xxxx. Images of ITM are from twitter2017 dataset.
 
 
@@ -33,8 +33,8 @@ python ./tools/extract_feat.py --gpu 0 \
 ```
  python train.py 
     --dataset ${i} \
-    --data_dir ./data/ \
-    --VG_data_dir ./data/Image-Target Matching \
+    --data_dir ./data/Sentiment_Analysis/ \
+    --VG_data_dir ./data/Image-Target Matching/ \
     --imagefeat_dir ./data/twitter_images/ \
     --VG_imagefeat_dir ./data/twitter_images/ \
     --output_dir ./log/ 
@@ -43,10 +43,10 @@ python ./tools/extract_feat.py --gpu 0 \
 ```
 python test.py 
     --dataset ${i} \
-    --data_dir ./data/ \
-    --VG_data_dir ./data/Image-Target Matching \
-    --imagefeat_dir ./twitter_images/ \
-    --VG_imagefeat_dir ./twitter_images/ \
+    --data_dir ./data/Sentiment_Analysis/ \
+    --VG_data_dir ./data/Image-Target Matching/ \
+    --imagefeat_dir ./data/twitter_images/ \
+    --VG_imagefeat_dir ./data/twitter_images/ \
     --output_dir ./log/ \
     --model_file pytorch_model.bin 
 ```
