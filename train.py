@@ -67,8 +67,6 @@ def post_dataloader(batch):
 def main():
     start_time = datetime.datetime.now().strftime('%m-%d-%Y-%H-%M-%S_')
     parser = argparse.ArgumentParser()
-
-    #!服务器默认开放0，所以，服务器n_gpu=1,在这边终端nohup可以0为主的n_gpu=4
     
     ## Required parameters
     parser.add_argument("--dataset",
@@ -158,9 +156,9 @@ def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
    
     args.data_dir=args.data_dir+str(args.dataset).lower()+ '/%s.pkl'
-    args.imagefeat_dir=args.imagefeat_dir+str(args.dataset).lower()+'_extract100'
+    args.imagefeat_dir=args.imagefeat_dir+str(args.dataset).lower()
     args.VG_data_dir= args.VG_data_dir + '/%s.pkl'
-    args.VG_imagefeat_dir = args.VG_imagefeat_dir+'twitter2017'+'_extract100'  # image-target-matching data from twitter2017
+    args.VG_imagefeat_dir = args.VG_imagefeat_dir+'twitter2017' # image-target-matching data from twitter2017
 
     args.output_dir=args.output_dir + str(args.dataset) + "/"
 
