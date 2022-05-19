@@ -14,7 +14,7 @@ We adopt two kinds of datasets to systematically evaluate the effectiveness of I
 - Twitter datasets for the TMSC task: the processed pkl files are in floder  `./data/Sentiment_Analysis/twitter201x/` . The original tweets, images and sentiment annotations can be download from [https://drive.google.com/file/d/1PpvvncnQkgDNeBMKVgG2zFYuRhbL873g/view](https://drive.google.com/file/d/1PpvvncnQkgDNeBMKVgG2zFYuRhbL873g/view)
 - Image-Target Matching dataset for the two auxiliary tasks: the processed pkl files are in floder  `./data/Image_Target_Matching/` . The original annotated xml files can be download from [Baidu Netdist]() with code: xxxx. Images of ITM are from twitter2017 dataset.
 
--- pkl files format 
+* pkl files format 
 ```
 {'1': {'iid': '16_05_01_105', 'sentence': 'Safety $T$ has signed a free agent contract with the Cleveland Browns ! # BBN # NFLCats # WeAreUKStill', 'aspect': 'A . J . Stamps', 'sentiment': '2', 'relation': '1', 'boxes': [(182, 9, 853, 856)]},...
 ```
