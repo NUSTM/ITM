@@ -179,7 +179,10 @@ def inference_auxtask(model, test_dataloader, output_dir, tokenizer,logger, vis=
                     pred_id=attn_map[i].argmax() 
                     debug_dir = os.path.join(output_dir )
                     iid=bytes((img_id[i])).decode().split(" ")[0]  
-                    img_path ='./data/twitter_images/twitter2017/'+str(iid)+".jpg"       #! modify the image path                                 
+                    try:
+                        img_path ='./data/twitter_images_ori/twitter2017/'+str(iid)+".jpg"       #! modify the image path      
+                    except:
+                        print("Add your original image path!')
                     img = cv2.imread(img_path)
                     debug_pred(debug_dir, vis_num, input_ids[i], img, (GT_boxes[i,0:1,:]).detach().numpy(), roi_boxes[i][pred_id], pred_iou,tokenizer, senti_pred[i],sentiment_label[i],relation_pred[i],relation_label[i],pred_score[i],box_labels[i][0])
                     vis_num+=1
