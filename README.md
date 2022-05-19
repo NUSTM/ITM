@@ -11,11 +11,12 @@ wjm@njust.edu.cn
 ## Data 
 We adopt two kinds of datasets to systematically evaluate the effectiveness of ITM.
 
-- Twitter datasets for the TMSC task: the processed pkl files are in floder  ./data/twitter201x/ . The original tweets, images and sentiment annotations can be download from [https://drive.google.com/file/d/1PpvvncnQkgDNeBMKVgG2zFYuRhbL873g/view](https://drive.google.com/file/d/1PpvvncnQkgDNeBMKVgG2zFYuRhbL873g/view)
-- Image-Target Matching dataset for the two auxiliary tasks: the processed pkl files are in floder  ./data/Image_Target_Matching/ . The original annotated xml files can be download from [Baidu Netdist]() with code: xxxx.
-  
+- Twitter datasets for the TMSC task: the processed pkl files are in floder  `./data/twitter201x/` . The original tweets, images and sentiment annotations can be download from [https://drive.google.com/file/d/1PpvvncnQkgDNeBMKVgG2zFYuRhbL873g/view](https://drive.google.com/file/d/1PpvvncnQkgDNeBMKVgG2zFYuRhbL873g/view)
+- Image-Target Matching dataset for the two auxiliary tasks: the processed pkl files are in floder  `./data/Image_Target_Matching/` . The original annotated xml files can be download from [Baidu Netdist]() with code: xxxx. Images of ITM are from twitter2017 dataset.
+
+
 ## Image Processing 
-We use [Faster-RCNN](https://github.com/peteanderson80/bottom-up-attention) to extract region feature as the input feature of images.For the details, you can refer to the [Faster-RCNN](https://github.com/peteanderson80/bottom-up-attention).
+We use [Faster-RCNN](https://github.com/peteanderson80/bottom-up-attention) to extract region feature as the input feature of images.For the details, you can refer to the original Github. Our processed image feature can be download from [Baidu Netdist]() with code.
 ```
 python ./tools/extract_feat.py --gpu 0 \
                     --cfg experiments/cfgs/faster_rcnn_end2end_resnet_vg.yml \
@@ -34,8 +35,8 @@ python ./tools/extract_feat.py --gpu 0 \
     --dataset ${i} \
     --data_dir ./data/ \
     --VG_data_dir ./data/Image-Target Matching \
-    --imagefeat_dir /mnt/nfs-storage-titan/data/twitter_images/ \
-    --VG_imagefeat_dir /mnt/nfs-storage-titan/data/twitter_images/ \
+    --imagefeat_dir ./data/twitter_images/ \
+    --VG_imagefeat_dir ./data/twitter_images/ \
     --output_dir ./log/ 
 ```
 - Inference for ITM
@@ -44,11 +45,10 @@ python test.py
     --dataset ${i} \
     --data_dir ./data/ \
     --VG_data_dir ./data/Image-Target Matching \
-    --imagefeat_dir /mnt/nfs-storage-titan/data/twitter_images/ \
-    --VG_imagefeat_dir /mnt/nfs-storage-titan/data/twitter_images/ \
+    --imagefeat_dir ./twitter_images/ \
+    --VG_imagefeat_dir ./twitter_images/ \
     --output_dir ./log/ \
-    --model_file pytorch_model.bin \
-    --vis 
+    --model_file pytorch_model.bin 
 ```
 
 ## Acknowledgements
