@@ -12,7 +12,7 @@ wjm@njust.edu.cn
 We adopt two kinds of datasets to systematically evaluate the effectiveness of ITM.
 
 - Twitter datasets for the TMSC task: the processed pkl files are in floder  `./data/Sentiment_Analysis/twitter201x/` . The original tweets, images and sentiment annotations can be download from [https://drive.google.com/file/d/1PpvvncnQkgDNeBMKVgG2zFYuRhbL873g/view](https://drive.google.com/file/d/1PpvvncnQkgDNeBMKVgG2zFYuRhbL873g/view)
-- Image-Target Matching dataset for the two auxiliary tasks: the processed pkl files are in floder  `./data/Image_Target_Matching/` . The original annotated xml files can be download from [Baidu Netdist]() with code: xxxx. Images of ITM are from twitter2017 dataset.
+- Image-Target Matching dataset for the two auxiliary tasks: the processed pkl files are in floder  `./data/Image_Target_Matching/` . The original annotated xml files can be download from [Baidu Netdist](https://pan.baidu.com/s/1S5R9Joo5d5-kBx2L8lAPBA) with code: rm6j. Images of ITM are from twitter2017 dataset.
 
 * pkl files format 
 ```
