@@ -16,7 +16,13 @@ We adopt two kinds of datasets to systematically evaluate the effectiveness of I
 
 * pkl files format 
 ```
-{'1': {'iid': '16_05_01_105', 'sentence': 'Safety $T$ has signed a free agent contract with the Cleveland Browns ! # BBN # NFLCats # WeAreUKStill', 'aspect': 'A . J . Stamps', 'sentiment': '2', 'relation': '1', 'boxes': [(182, 9, 853, 856)]},...
+{'1': {'iid': '16_05_01_105', 
+      'sentence': 'Safety $T$ has signed a free agent contract with the Cleveland Browns ! # BBN # NFLCats # WeAreUKStill', 
+      'aspect': 'A . J . Stamps', 
+      'sentiment': '2', 
+      'relation': '1', 
+      'boxes': [(182, 9, 853, 856)]},
+ ...
 ```
 
 
