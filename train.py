@@ -237,14 +237,6 @@ def main():
                             warmup=args.warmup_proportion,
                             t_total=num_train_steps)
 
-    # optimizer_VG = optim.AdamW(optimizer_grouped_parameters,
-    #                             lr=args.VG_learning_rate )
-    # optimizer_SA = optim.AdamW(optimizer_grouped_parameters,
-    #                             lr=args.SA_learning_rate )
-
-
-    
-
     VG_global_step = 0
     SA_global_step = 0
     nb_tr_steps = 0
@@ -427,9 +419,9 @@ def main():
         
 
         
-        result = {  'nb_eval_examples':nb_eval_examples, #验证集样例数
-                    'num_valid':num_valid,               #有标注的样例数
-                    'Dev_rel_acc':rel_acc,               #样例为单位，关系预测正确率
+        result = {  'nb_eval_examples':nb_eval_examples, 
+                    'num_valid':num_valid,               
+                    'Dev_rel_acc':rel_acc,               
                     'Dev_senti_acc':senti_acc,             
                     'Dev_senti_precision':senti_precision,
                     'Dev_senti_recall':senti_recall,
