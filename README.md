@@ -65,4 +65,5 @@ python test.py
 
 ## Acknowledgements
 
-Most of the codes are based on the codes provided by [huggingface](https://github.com/huggingface/transformers).
+- Using the Image-Target Matching dataset means you have read and accepted the copyrights set by Twitter and dataset providers.
+- Most of the codes are based on the codes provided by [huggingface](https://github.com/huggingface/transformers).
